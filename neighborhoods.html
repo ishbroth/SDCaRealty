@@ -15,6 +15,26 @@
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
             gap: 1.5rem;
         }
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        .photo-gallery img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+            .photo-gallery img {
+                height: 250px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -53,8 +73,19 @@
         </div>
     </header>
 
-    <!-- Neighborhoods -->
+    <!-- Photo Gallery -->
     <section class="section">
+        <div class="container">
+            <div class="photo-gallery">
+                <img src="images/neighborhood-1.jpg" alt="San Diego neighborhood view">
+                <img src="images/neighborhood-2.jpg" alt="San Diego coastal area">
+                <img src="images/neighborhood-3.jpg" alt="San Diego community">
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhoods -->
+    <section class="section" style="padding-top: 0;">
         <div class="container">
             <div class="neighborhoods-grid">
                 <div class="neighborhood-card">
